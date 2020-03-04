@@ -1,2 +1,35 @@
-.testing {
-  width: 71.42857%; }
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+body {
+  margin: 0; }
+
+a {
+  font-family: "Open Sans", sans-serif; }
+
+.navbar {
+  height: 75px;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+  .navbar__search input {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    height: 32px;
+    width: 520px;
+    background: url(./../public/img/search.png) no-repeat !important;
+    background-color: white !important;
+    background-position: right !important; }
+  .navbar__search input:focus {
+    outline: none; }
+  .navbar__user a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 12px; }
+  .navbar__user a:visited {
+    color: #717171; }
+  .navbar__user img {
+    margin-right: 3px;
+    width: 18px;
+    height: 18px; }

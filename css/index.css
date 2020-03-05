@@ -264,6 +264,43 @@ a {
     .footer-institucional img {
       width: 210px; }
 
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px; }
+  .sidenav__user {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+    text-decoration: none; }
+    .sidenav__user img {
+      margin: 15px 10px; }
+  .sidenav__user:visited {
+    color: black; }
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  text-decoration: none; }
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px; }
+  .sidenav a {
+    font-size: 18px; } }
+
 .slick-dots {
   bottom: 5px !important; }
 

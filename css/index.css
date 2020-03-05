@@ -140,7 +140,11 @@ a {
         margin: 0; }
 
 .sold {
-  margin: 0px 125px; }
+  margin: 0px 125px;
+  height: 525px; }
+  @media (max-width: 768px) {
+    .sold {
+      margin: 0px 15px 50px 15px; } }
   .sold .slick-slide {
     margin: 0 15px; }
   .sold h2 {
@@ -150,37 +154,114 @@ a {
     width: 10%;
     position: absolute;
     border-bottom: 2px solid black; }
-  .sold-itens {
+  .sold-itens, .sold-itens-mobile {
     margin-top: 30px; }
-    .sold-itens__card {
+    .sold-itens__card, .sold-itens-mobile__card {
       display: flex !important;
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      background-color: lightgray;
       font-family: "Open Sans", sans-serif;
       color: #524a4a;
       height: auto; }
-      .sold-itens__card h3 {
+      .sold-itens__card h3, .sold-itens-mobile__card h3 {
         margin: 5px; }
-      .sold-itens__card p {
-        margin-top: 10px;
-        font-size: 14px; }
-      .sold-itens__card span {
+        @media (max-width: 768px) {
+          .sold-itens__card h3, .sold-itens-mobile__card h3 {
+            font-size: 15px; } }
+      .sold-itens__card p, .sold-itens-mobile__card p {
+        margin: 20px;
+        text-align: center;
+        font-size: 13px; }
+      .sold-itens__card span, .sold-itens-mobile__card span {
         font-size: 11px; }
-      .sold-itens__card a {
+      .sold-itens__card a, .sold-itens-mobile__card a {
         margin: 10px 35px;
         padding: 10px 30px;
-        background-color: #423838;
+        background-color: black;
         color: white;
-        border: 1px solid black;
         text-decoration: none;
-        border-radius: 3px; }
-      .sold-itens__card--rating {
+        border-radius: 3px;
+        display: none; }
+        @media (max-width: 768px) {
+          .sold-itens__card a, .sold-itens-mobile__card a {
+            display: block; } }
+      .sold-itens__card--rating, .sold-itens-mobile__card--rating {
         display: flex;
         margin-bottom: 10px; }
-        .sold-itens__card--rating div {
+        .sold-itens__card--rating div, .sold-itens-mobile__card--rating div {
           margin: 0px 3px; }
+      .sold-itens__card--off, .sold-itens-mobile__card--off {
+        position: absolute;
+        width: 75px;
+        height: 75px;
+        background: #d84d4d;
+        top: 0;
+        border-bottom-left-radius: 100%;
+        margin-left: 50px;
+        display: flex;
+        justify-content: center; }
+        .sold-itens__card--off p, .sold-itens-mobile__card--off p {
+          color: white;
+          font-weight: bold;
+          font-size: 18px;
+          margin-left: 30px; }
+    .sold-itens__card:hover, .sold-itens-mobile__card:hover {
+      background-color: lightgray; }
+      .sold-itens__card:hover a, .sold-itens-mobile__card:hover a {
+        display: block; }
+
+@media (max-width: 768px) {
+  .sold-itens {
+    display: none; } }
+
+.sold-itens-mobile {
+  display: none; }
+  @media (max-width: 768px) {
+    .sold-itens-mobile {
+      display: block; } }
+
+.footer {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  @media (max-width: 790px) {
+    .footer {
+      flex-direction: column; } }
+  .footer-address {
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    margin: 50px; }
+    .footer-address p {
+      font-size: 13px; }
+  .footer-contact a {
+    text-decoration: none; }
+    .footer-contact a div {
+      display: flex;
+      justify-content: space-between;
+      background: white;
+      padding: 0px 20px;
+      align-items: center;
+      border-radius: 5px;
+      height: 45px;
+      margin-bottom: 10px; }
+      .footer-contact a div img {
+        width: 20px;
+        height: 20px; }
+      .footer-contact a div p {
+        font-weight: bold;
+        margin-left: 5px;
+        font-size: 14px; }
+        @media (max-width: 992px) {
+          .footer-contact a div p {
+            font-size: 11px; } }
+  .footer-contact a:visited {
+    color: black; }
+  .footer-institucional {
+    margin: 50px; }
+    .footer-institucional img {
+      width: 210px; }
 
 .slick-dots {
   bottom: 5px !important; }

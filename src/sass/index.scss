@@ -179,6 +179,10 @@ a {
 
 .sold {
   margin: 0px 125px;
+  height: 525px;
+  @media (max-width: 768px) {
+    margin: 0px 15px 50px 15px;
+  }
   .slick-slide {
     margin: 0 15px;
   }
@@ -191,23 +195,26 @@ a {
     position: absolute;
     border-bottom: 2px solid black;
   }
-  &-itens {
+  &-itens, &-itens-mobile {
     margin-top: 30px;
     &__card {
       display: flex !important;
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      background-color: lightgray;
       font-family: $font-pattern;
       color: #524a4a;
       height: auto;
       h3 {
         margin: 5px;
+        @media (max-width: 768px) {
+          font-size: 15px;
+        }
       }
       p {
-        margin-top: 10px;
-        font-size: 14px;
+        margin: 20px;
+        text-align: center;
+        font-size: 13px;
       }
       span {
         font-size: 11px;
@@ -215,11 +222,14 @@ a {
       a {
         margin: 10px 35px;
         padding: 10px 30px;
-        background-color: #423838;
+        background-color: black;
         color: white;
-        border: 1px solid black;
         text-decoration: none;
         border-radius: 3px;
+        display: none;
+        @media (max-width: 768px) {
+          display: block;
+        }
       }
       &--rating {
         display: flex;
@@ -228,7 +238,99 @@ a {
           margin: 0px 3px;
         }
       }
+      &--off {
+        position: absolute;
+        width: 75px;
+        height: 75px;
+        background: #d84d4d;
+        top: 0;
+        border-bottom-left-radius: 100%;
+        margin-left: 50px;
+        display: flex;
+        justify-content: center;
+        p {
+          color: white;
+          font-weight: bold;
+          font-size: 18px;
+          margin-left: 30px;
+        }
+      }
     }
+    &__card:hover {
+      background-color: lightgray;
+      a{
+        display: block;
+      }
+    }
+  }
+}
+
+.sold-itens {
+  @media(max-width: 768px) {
+    display: none;
+  }
+}
+
+.sold-itens-mobile {
+  display: none;
+  @media(max-width: 768px) {
+    display: block;
+  }
+}
+
+
+
+.footer {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media (max-width: 790px) {
+    flex-direction: column;
+  }
+  &-address {
+    color: white;
+    font-family: $font-pattern;
+    margin: 50px;
+    p {
+      font-size: 13px;
+    }
+  }
+  &-contact {
+    a {
+      text-decoration: none;
+      div {
+        display: flex;
+        justify-content: space-between;
+        background: white;
+        padding: 0px 20px;
+        align-items: center;
+        border-radius: 5px;
+        height: 45px;
+        margin-bottom: 10px;
+        img {
+          width: 20px;
+          height: 20px;
+        }
+        p {
+          font-weight: bold;
+          margin-left: 5px;
+          font-size: 14px;
+          @media (max-width: 992px) {
+            font-size: 11px;
+          }
+        }
+      }
+    }
+    a:visited {
+      color: black;
+    }
+  }
+  &-institucional {
+    img {
+      width: 210px;
+    }
+    margin: 50px;
   }
 }
 

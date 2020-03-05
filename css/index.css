@@ -141,10 +141,11 @@ a {
 
 .sold {
   margin: 0px 125px;
-  height: 525px; }
+  height: 640px; }
   @media (max-width: 768px) {
     .sold {
-      margin: 0px 15px 50px 15px; } }
+      margin: 0px 15px 50px 15px;
+      height: unset; } }
   .sold .slick-slide {
     margin: 0 15px; }
   .sold h2 {
@@ -224,7 +225,7 @@ a {
 .footer {
   background-color: black;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center; }
   @media (max-width: 790px) {
     .footer {

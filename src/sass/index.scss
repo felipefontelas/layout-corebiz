@@ -179,9 +179,10 @@ a {
 
 .sold {
   margin: 0px 125px;
-  height: 525px;
+  height: 640px;
   @media (max-width: 768px) {
     margin: 0px 15px 50px 15px;
+    height: unset;
   }
   .slick-slide {
     margin: 0 15px;
@@ -195,7 +196,8 @@ a {
     position: absolute;
     border-bottom: 2px solid black;
   }
-  &-itens, &-itens-mobile {
+  &-itens,
+  &-itens-mobile {
     margin-top: 30px;
     &__card {
       display: flex !important;
@@ -258,7 +260,7 @@ a {
     }
     &__card:hover {
       background-color: lightgray;
-      a{
+      a {
         display: block;
       }
     }
@@ -266,24 +268,22 @@ a {
 }
 
 .sold-itens {
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     display: none;
   }
 }
 
 .sold-itens-mobile {
   display: none;
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     display: block;
   }
 }
 
-
-
 .footer {
   background-color: black;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   @media (max-width: 790px) {
     flex-direction: column;
